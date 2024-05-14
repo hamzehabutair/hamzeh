@@ -5,6 +5,7 @@ class ClientTypes(models.Model):
     description = models.CharField(max_length=500)
 def __str__(self):
     return self.name
+
 class Client(models.Model):
     gender_choices = [(1, "Male"), (2, "Female")]
     cid = models.IntegerField(primary_key=True, max_length=5,default=0)
