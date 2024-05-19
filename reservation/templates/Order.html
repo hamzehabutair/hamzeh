@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+    oid:<input type="number" name="oid"><br>
+    cid:<input type="" name="cid"><br>
+    pid:<input type="" name="pid"><br>
+    orderdate:<input type="date" name="orderdate"><br>
+    shippingdate:<input type="date" name="shippingdate"><br>
+    <input type="submit" value="submit">
+    <input type="reset" value="clear">
+</form>
+
+</body>
+</html>

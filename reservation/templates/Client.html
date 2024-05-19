@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    gender_choices:<br>
+    Male:<input type="radio" name="gender_choices" value="1"><br>
+    Female:<input type="radio" name="gender_choices" value="2"><br>
+    cid:<input type="number" name="cid"><br>
+    name:<input type="text" name="name"><br>
+    gender:<input type="radio" name=""><br>
+    email:<input type="email" name="email"><br>
+    birthday:<input type="date" name="birthday"><br>
+
+    <input type="submit" value="submit">
+    <input type="reset" value="clear">
+</form>
+<h1>Client List</h1>
+  <ul>
+    {% for client in clients %}
+      <li>{{ client.name }} - {{ client.email }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
